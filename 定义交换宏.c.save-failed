@@ -1,0 +1,28 @@
+#include<stdio.h>
+ int swap(int *a,int *b);
+int main (void)
+{
+ int i,k,a,b;
+ k=0;
+ int num[9999];
+ while   (scanf("%d %d",&num[k],&num[k+1])!=EOF)
+ {
+     i=1;
+     printf("Case i\n");
+     printf("Before Swap:a=%d b=%d\n",num[k],num[k+1]);
+     a=num[k];
+     b=num[k+1];
+     swap(a,b);
+     printf("After Swap:a=%d b=%d\n",num[k],num[k+1]);
+     i+=1;
+     k+=2;
+ }
+ return 0;
+}
+int swap(int*a,int*b)
+{
+    int temp;
+    temp=*a;
+    *a=*b;
+   *b=temp;
+}
